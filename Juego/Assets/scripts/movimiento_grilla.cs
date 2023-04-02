@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class movimiento_grilla : MonoBehaviour
 {
-    // Start is called before the first frame update
+   
     private Vector3 targetPosition;
     private float yImput, xImput;
     private float moveTime=0.15f;
     private bool isMoving;
+    private Animator anim;
    
+    // Start is called before the first frame update
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +30,9 @@ public class movimiento_grilla : MonoBehaviour
             }
             
         }
+        //para animar el personaje
+        anim.SetFloat("VelX", xImput);
+        anim.SetFloat("VelY", yImput);
     }
     IEnumerator move()
     {
@@ -68,4 +77,5 @@ public class movimiento_grilla : MonoBehaviour
     {
         Gizmos.DrawSphere(targetPosition, 0.16f);
     }
+   
 }
