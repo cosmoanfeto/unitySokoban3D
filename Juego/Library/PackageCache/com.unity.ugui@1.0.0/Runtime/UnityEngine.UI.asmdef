@@ -1,8 +1,6 @@
 {
     "name": "UnityEngine.UI",
-    "references": [
-        "UnityEngine.UIElementsModule"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
@@ -22,19 +20,9 @@
             "define": "PACKAGE_PHYSICS2D"
         },
         {
-            "name": "com.unity.modules.tilemap",
-            "expression": "1.0.0",
-            "define": "PACKAGE_TILEMAP"
-        },
-        {
             "name": "com.unity.modules.animation",
             "expression": "1.0.0",
             "define": "PACKAGE_ANIMATION"
-        },
-        {
-            "name": "com.unity.modules.uielements",
-            "expression": "1.0.0",
-            "define": "PACKAGE_UITOOLKIT"
         }
     ],
     "noEngineReferences": false

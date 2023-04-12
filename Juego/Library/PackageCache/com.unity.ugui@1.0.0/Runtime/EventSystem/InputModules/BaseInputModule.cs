@@ -12,7 +12,6 @@ namespace UnityEngine.EventSystems
     /// </remarks>
     /// <example>
     /// <code>
-    /// <![CDATA[
     /// using UnityEngine;
     /// using UnityEngine.EventSystems;
     ///
@@ -31,20 +30,12 @@ namespace UnityEngine.EventSystems
     ///         ExecuteEvents.Execute (m_TargetObject, new BaseEventData (eventSystem), ExecuteEvents.moveHandler);
     ///     }
     /// }
-    /// ]]>
-    ///</code>
+    /// </code>
     /// </example>
     public abstract class BaseInputModule : UIBehaviour
     {
         [NonSerialized]
         protected List<RaycastResult> m_RaycastResultCache = new List<RaycastResult>();
-
-        /// <summary>
-        /// True if pointer hover events will be sent to the parent
-        /// </summary>
-        [SerializeField] private bool m_SendPointerHoverToParent = true;
-        //This is needed for testing
-        internal bool sendPointerHoverToParent { get { return m_SendPointerHoverToParent; } set { m_SendPointerHoverToParent = value; } }
 
         private AxisEventData m_AxisEventData;
 
@@ -125,8 +116,7 @@ namespace UnityEngine.EventSystems
         /// </summary>
         protected static RaycastResult FindFirstRaycast(List<RaycastResult> candidates)
         {
-            var candidatesCount = candidates.Count;
-            for (var i = 0; i < candidatesCount; ++i)
+            for (var i = 0; i < candidates.Count; ++i)
             {
                 if (candidates[i].gameObject == null)
                     continue;
@@ -160,10 +150,16 @@ namespace UnityEngine.EventSystems
 
             if (Mathf.Abs(x) > Mathf.Abs(y))
             {
-                return x > 0 ? MoveDirection.Right : MoveDirection.Left;
+                if (x > 0)
+                    return MoveDirection.Right;
+                return MoveDirection.Left;
             }
-
-            return y > 0 ? MoveDirection.Up : MoveDirection.Down;
+            else
+            {
+                if (y > 0)
+                    return MoveDirection.Up;
+                return MoveDirection.Down;
+            }
         }
 
         /// <summary>
@@ -192,10 +188,9 @@ namespace UnityEngine.EventSystems
             return null;
         }
 
-        // walk up the tree till a common root between the last entered and the current entered is found
-        // send exit events up to (but not including) the common root. Then send enter events up to
-        // (but not including) the common root.
-        // Send move events before exit, after enter, and on hovered objects when pointer data has changed.
+        // walk up the tree till a common root between the last entered and the current entered is foung
+        // send exit events up to (but not inluding) the common root. Then send enter events up to
+        // (but not including the common root).
         protected void HandlePointerExitAndEnter(PointerEventData currentPointerData, GameObject newEnterTarget)
         {
             // if we have no target / pointerEnter has been deleted
@@ -203,13 +198,8 @@ namespace UnityEngine.EventSystems
             // then exit
             if (newEnterTarget == null || currentPointerData.pointerEnter == null)
             {
-                var hoveredCount = currentPointerData.hovered.Count;
-                for (var i = 0; i < hoveredCount; ++i)
-                {
-                    currentPointerData.fullyExited = true;
-                    ExecuteEvents.Execute(currentPointerData.hovered[i], currentPointerData, ExecuteEvents.pointerMoveHandler);
+                for (var i = 0; i < currentPointerData.hovered.Count; ++i)
                     ExecuteEvents.Execute(currentPointerData.hovered[i], currentPointerData, ExecuteEvents.pointerExitHandler);
-                }
 
                 currentPointerData.hovered.Clear();
 
@@ -222,81 +212,40 @@ namespace UnityEngine.EventSystems
 
             // if we have not changed hover target
             if (currentPointerData.pointerEnter == newEnterTarget && newEnterTarget)
-            {
-                if (currentPointerData.IsPointerMoving())
-                {
-                    var hoveredCount = currentPointerData.hovered.Count;
-                    for (var i = 0; i < hoveredCount; ++i)
-                        ExecuteEvents.Execute(currentPointerData.hovered[i], currentPointerData, ExecuteEvents.pointerMoveHandler);
-                }
                 return;
-            }
 
             GameObject commonRoot = FindCommonRoot(currentPointerData.pointerEnter, newEnterTarget);
-            GameObject pointerParent = ((Component)newEnterTarget.GetComponentInParent<IPointerExitHandler>())?.gameObject;
 
             // and we already an entered object from last time
             if (currentPointerData.pointerEnter != null)
             {
                 // send exit handler call to all elements in the chain
                 // until we reach the new target, or null!
-                // ** or when !m_SendPointerEnterToParent, stop when meeting a gameobject with an exit event handler
                 Transform t = currentPointerData.pointerEnter.transform;
 
                 while (t != null)
                 {
                     // if we reach the common root break out!
-                    if (m_SendPointerHoverToParent && commonRoot != null && commonRoot.transform == t)
-                        break;
-
-                    // if we reach a PointerExitEvent break out!
-                    if (!m_SendPointerHoverToParent && pointerParent == t.gameObject)
-                        break;
-
-                    currentPointerData.fullyExited = t.gameObject != commonRoot && currentPointerData.pointerEnter != newEnterTarget;
-                    ExecuteEvents.Execute(t.gameObject, currentPointerData, ExecuteEvents.pointerMoveHandler);
-                    ExecuteEvents.Execute(t.gameObject, currentPointerData, ExecuteEvents.pointerExitHandler);
-                    currentPointerData.hovered.Remove(t.gameObject);
-
-                    if (m_SendPointerHoverToParent) t = t.parent;
-
-                    // if we reach the common root break out!
                     if (commonRoot != null && commonRoot.transform == t)
                         break;
 
-                    if (!m_SendPointerHoverToParent) t = t.parent;
+                    ExecuteEvents.Execute(t.gameObject, currentPointerData, ExecuteEvents.pointerExitHandler);
+                    currentPointerData.hovered.Remove(t.gameObject);
+                    t = t.parent;
                 }
             }
 
             // now issue the enter call up to but not including the common root
-            var oldPointerEnter = currentPointerData.pointerEnter;
             currentPointerData.pointerEnter = newEnterTarget;
             if (newEnterTarget != null)
             {
                 Transform t = newEnterTarget.transform;
 
-                while (t != null)
+                while (t != null && t.gameObject != commonRoot)
                 {
-                    currentPointerData.reentered = t.gameObject == commonRoot && t.gameObject != oldPointerEnter;
-                    // if we are sending the event to parent, they are already in hover mode at that point. No need to bubble up the event.
-                    if (m_SendPointerHoverToParent && currentPointerData.reentered)
-                        break;
-
                     ExecuteEvents.Execute(t.gameObject, currentPointerData, ExecuteEvents.pointerEnterHandler);
-                    ExecuteEvents.Execute(t.gameObject, currentPointerData, ExecuteEvents.pointerMoveHandler);
                     currentPointerData.hovered.Add(t.gameObject);
-
-                    // stop when encountering an object with the pointerEnterHandler
-                    if (!m_SendPointerHoverToParent && t.gameObject.GetComponent<IPointerEnterHandler>() != null)
-                        break;
-
-                    if (m_SendPointerHoverToParent) t = t.parent;
-
-                    // if we reach the common root break out!
-                    if (commonRoot != null && commonRoot.transform == t)
-                        break;
-
-                    if (!m_SendPointerHoverToParent) t = t.parent;
+                    t = t.parent;
                 }
             }
         }
@@ -373,22 +322,6 @@ namespace UnityEngine.EventSystems
         public virtual bool IsModuleSupported()
         {
             return true;
-        }
-
-        /// <summary>
-        /// Returns Id of the pointer following <see cref="UnityEngine.UIElements.PointerId"/> convention.
-        /// </summary>
-        /// <param name="sourcePointerData">PointerEventData whose pointerId will be converted to UI Toolkit pointer convention.</param>
-        /// <seealso cref="UnityEngine.UIElements.IPointerEvent" />
-        public virtual int ConvertUIToolkitPointerId(PointerEventData sourcePointerData)
-        {
-#if PACKAGE_UITOOLKIT
-            return sourcePointerData.pointerId < 0 ?
-                UIElements.PointerId.mousePointerId :
-                UIElements.PointerId.touchPointerIdBase + sourcePointerData.pointerId;
-#else
-            return -1;
-#endif
         }
     }
 }

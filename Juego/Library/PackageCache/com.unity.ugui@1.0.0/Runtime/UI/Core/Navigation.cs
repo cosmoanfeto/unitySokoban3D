@@ -23,7 +23,6 @@ namespace UnityEngine.UI
         /// </remarks>
         /// <example>
         /// <code>
-        /// <![CDATA[
         /// using UnityEngine;
         /// using System.Collections;
         /// using UnityEngine.UI; // Required when Using UI elements.
@@ -41,8 +40,7 @@ namespace UnityEngine.UI
         ///         }
         ///     }
         /// }
-        /// ]]>
-        ///</code>
+        /// </code>
         /// </example>
         public enum Mode
         {
@@ -88,10 +86,6 @@ namespace UnityEngine.UI
         [SerializeField]
         private Mode m_Mode;
 
-        [Tooltip("Enables navigation to wrap around from last to first or first to last element. Does not work for automatic grid navigation")]
-        [SerializeField]
-        private bool m_WrapAround;
-
         // Game object selected when the joystick moves up. Used when navigation is set to "Explicit".
         [SerializeField]
         private Selectable m_SelectOnUp;
@@ -114,20 +108,10 @@ namespace UnityEngine.UI
         public Mode       mode           { get { return m_Mode; } set { m_Mode = value; } }
 
         /// <summary>
-        /// Enables navigation to wrap around from last to first or first to last element.
-        /// Will find the furthest element from the current element in the opposite direction of movement.
-        /// </summary>
-        /// <example>
-        /// Note: If you have a grid of elements and you are on the last element in a row it will not wrap over to the next row it will pick the furthest element in the opposite direction.
-        /// </example>
-        public bool wrapAround { get { return m_WrapAround; } set { m_WrapAround = value; } }
-
-        /// <summary>
         /// Specify a Selectable UI GameObject to highlight when the Up arrow key is pressed.
         /// </summary>
         /// <example>
         /// <code>
-        /// <![CDATA[
         /// using UnityEngine;
         /// using System.Collections;
         /// using UnityEngine.UI;  // Required when Using UI elements.
@@ -152,8 +136,7 @@ namespace UnityEngine.UI
         ///         btnLoad.navigation = navigation;
         ///     }
         /// }
-        /// ]]>
-        ///</code>
+        /// </code>
         /// </example>
         public Selectable selectOnUp     { get { return m_SelectOnUp; } set { m_SelectOnUp = value; } }
 
@@ -162,7 +145,6 @@ namespace UnityEngine.UI
         /// </summary>
         /// <example>
         /// <code>
-        /// <![CDATA[
         /// using UnityEngine;
         /// using System.Collections;
         /// using UnityEngine.UI;  // Required when Using UI elements.
@@ -187,8 +169,7 @@ namespace UnityEngine.UI
         ///         btnLoad.navigation = navigation;
         ///     }
         /// }
-        /// ]]>
-        ///</code>
+        /// </code>
         /// </example>
         public Selectable selectOnDown   { get { return m_SelectOnDown; } set { m_SelectOnDown = value; } }
 
@@ -197,7 +178,6 @@ namespace UnityEngine.UI
         /// </summary>
         /// <example>
         /// <code>
-        /// <![CDATA[
         /// using UnityEngine;
         /// using System.Collections;
         /// using UnityEngine.UI;  // Required when Using UI elements.
@@ -222,8 +202,7 @@ namespace UnityEngine.UI
         ///         btnLoad.navigation = navigation;
         ///     }
         /// }
-        /// ]]>
-        ///</code>
+        /// </code>
         /// </example>
         public Selectable selectOnLeft   { get { return m_SelectOnLeft; } set { m_SelectOnLeft = value; } }
 
@@ -232,7 +211,6 @@ namespace UnityEngine.UI
         /// </summary>
         /// <example>
         /// <code>
-        /// <![CDATA[
         /// using UnityEngine;
         /// using System.Collections;
         /// using UnityEngine.UI;  // Required when Using UI elements.
@@ -257,8 +235,7 @@ namespace UnityEngine.UI
         ///         btnLoad.navigation = navigation;
         ///     }
         /// }
-        /// ]]>
-        ///</code>
+        /// </code>
         /// </example>
         public Selectable selectOnRight  { get { return m_SelectOnRight; } set { m_SelectOnRight = value; } }
 
@@ -267,7 +244,6 @@ namespace UnityEngine.UI
         /// </summary>
         /// <example>
         /// <code>
-        /// <![CDATA[
         /// using UnityEngine;
         /// using System.Collections;
         /// using UnityEngine.UI; // Required when Using UI elements.
@@ -282,8 +258,7 @@ namespace UnityEngine.UI
         ///         button.navigation = Navigation.defaultNavigation;
         ///     }
         /// }
-        /// ]]>
-        ///</code>
+        /// </code>
         /// </example>
         static public Navigation defaultNavigation
         {
@@ -291,7 +266,6 @@ namespace UnityEngine.UI
             {
                 var defaultNav = new Navigation();
                 defaultNav.m_Mode = Mode.Automatic;
-                defaultNav.m_WrapAround = false;
                 return defaultNav;
             }
         }

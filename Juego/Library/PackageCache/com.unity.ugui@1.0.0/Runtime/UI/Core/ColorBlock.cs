@@ -42,7 +42,6 @@ namespace UnityEngine.UI
         /// </summary>
         /// <example>
         /// <code>
-        /// <![CDATA[
         /// using UnityEngine;
         /// using System.Collections;
         /// using UnityEngine.UI; // Required when Using UI elements.
@@ -60,8 +59,7 @@ namespace UnityEngine.UI
         ///         button.colors = cb;
         ///     }
         /// }
-        /// ]]>
-        ///</code>
+        /// </code>
         /// </example>
         public Color normalColor       { get { return m_NormalColor; } set { m_NormalColor = value; } }
 
@@ -70,7 +68,6 @@ namespace UnityEngine.UI
         /// </summary>
         /// <example>
         /// <code>
-        /// <![CDATA[
         /// using UnityEngine;
         /// using System.Collections;
         /// using UnityEngine.UI; // Required when Using UI elements.
@@ -88,8 +85,7 @@ namespace UnityEngine.UI
         ///         button.colors = cb;
         ///     }
         /// }
-        /// ]]>
-        ///</code>
+        /// </code>
         /// </example>
         public Color highlightedColor  { get { return m_HighlightedColor; } set { m_HighlightedColor = value; } }
 
@@ -98,7 +94,6 @@ namespace UnityEngine.UI
         /// </summary>
         /// <example>
         /// <code>
-        /// <![CDATA[
         /// using UnityEngine;
         /// using System.Collections;
         /// using UnityEngine.UI; // Required when Using UI elements.
@@ -116,8 +111,7 @@ namespace UnityEngine.UI
         ///         button.colors = cb;
         ///     }
         /// }
-        /// ]]>
-        ///</code>
+        /// </code>
         /// </example>
         public Color pressedColor      { get { return m_PressedColor; } set { m_PressedColor = value; } }
 
@@ -126,7 +120,6 @@ namespace UnityEngine.UI
         /// </summary>
         /// <example>
         /// <code>
-        /// <![CDATA[
         /// using UnityEngine;
         /// using System.Collections;
         /// using UnityEngine.UI; // Required when Using UI elements.
@@ -144,8 +137,7 @@ namespace UnityEngine.UI
         ///         button.colors = cb;
         ///     }
         /// }
-        /// ]]>
-        ///</code>
+        /// </code>
         /// </example>
         public Color selectedColor     { get { return m_SelectedColor; } set { m_SelectedColor = value; } }
 
@@ -154,7 +146,6 @@ namespace UnityEngine.UI
         /// </summary>
         /// <example>
         /// <code>
-        /// <![CDATA[
         /// using UnityEngine;
         /// using System.Collections;
         /// using UnityEngine.UI; // Required when Using UI elements.
@@ -172,8 +163,7 @@ namespace UnityEngine.UI
         ///         button.colors = cb;
         ///     }
         /// }
-        /// ]]>
-        ///</code>
+        /// </code>
         /// </example>
         public Color disabledColor     { get { return m_DisabledColor; } set { m_DisabledColor = value; } }
 
@@ -190,20 +180,22 @@ namespace UnityEngine.UI
         /// <summary>
         /// Simple getter for a code generated default ColorBlock.
         /// </summary>
-        public static ColorBlock defaultColorBlock;
-
-        static ColorBlock()
+        public static ColorBlock defaultColorBlock
         {
-            defaultColorBlock = new ColorBlock
+            get
             {
-                m_NormalColor      = new Color32(255, 255, 255, 255),
-                m_HighlightedColor = new Color32(245, 245, 245, 255),
-                m_PressedColor     = new Color32(200, 200, 200, 255),
-                m_SelectedColor    = new Color32(245, 245, 245, 255),
-                m_DisabledColor    = new Color32(200, 200, 200, 128),
-                colorMultiplier    = 1.0f,
-                fadeDuration       = 0.1f
-            };
+                var c = new ColorBlock
+                {
+                    m_NormalColor      = new Color32(255, 255, 255, 255),
+                    m_HighlightedColor = new Color32(245, 245, 245, 255),
+                    m_PressedColor     = new Color32(200, 200, 200, 255),
+                    m_SelectedColor    = new Color32(245, 245, 245, 255),
+                    m_DisabledColor    = new Color32(200, 200, 200, 128),
+                    colorMultiplier    = 1.0f,
+                    fadeDuration       = 0.1f
+                };
+                return c;
+            }
         }
 
         public override bool Equals(object obj)
