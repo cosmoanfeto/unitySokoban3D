@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638174306761654290
-    m_Hash: 3305885565
+      ticks: 638176139319789319
+    m_Hash: 97954656
   m_LockFileStatus:
     m_FilePath: C:/Users/Gisell/Desktop/SOKOBAN/unitySokoban3D/Juego/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638174365090028248
-    m_Hash: 730735806
+      ticks: 638176139321868151
+    m_Hash: 766990907
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,58 @@ m_LocalPackages:
 m_ProjectPath: C:/Users/Gisell/Desktop/SOKOBAN/unitySokoban3D/Juego/Packages
 m_EditorVersion: 2021.3.21f1 (1b156197d683)
 m_ResolvedPackages:
+- packageId: com.unity.2d.sprite@1.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 1.0.0
+  source: 2
+  resolvedPath: C:\Users\Gisell\Desktop\SOKOBAN\unitySokoban3D\Juego\Library\PackageCache\com.unity.2d.sprite@1.0.0
+  assetPath: Packages/com.unity.2d.sprite
+  name: com.unity.2d.sprite
+  displayName: 2D Sprite
+  author:
+    name: 
+    email: 
+    url: 
+  category: 2D
+  type: 
+  description: Use Unity Sprite Editor Window to create and edit Sprite asset properties
+    like pivot, borders and Physics shape
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.0
+    compatible:
+    - 1.0.0
+    verified: 1.0.0
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - 2d
+  - sprite
+  - sprite editor window
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 1.0.0
+    nextVersion: 
 - packageId: com.unity.2d.tilemap@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -272,16 +324,18 @@ m_ResolvedPackages:
     - 2.0.0
     - 2.0.1
     - 2.0.3
+    - 2.0.4
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
     compatible:
     - 2.0.1
     - 2.0.3
+    - 2.0.4
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
-    verified: 2.0.3
+    verified: 2.0.4
   dependencies: []
   resolvedDependencies: []
   keywords:
@@ -463,9 +517,13 @@ m_ResolvedPackages:
     - 3.0.16
     - 3.0.17
     - 3.0.18
+    - 3.0.20
+    - 3.0.21
     compatible:
     - 3.0.18
-    verified: 3.0.18
+    - 3.0.20
+    - 3.0.21
+    verified: 3.0.21
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -536,9 +594,11 @@ m_ResolvedPackages:
     - 2.0.15
     - 2.0.16
     - 2.0.17
+    - 2.0.18
     compatible:
     - 2.0.17
-    verified: 2.0.17
+    - 2.0.18
+    verified: 2.0.18
   dependencies:
   - name: com.unity.test-framework
     version: 1.1.9
@@ -3234,9 +3294,11 @@ m_ResolvedPackages:
     - 1.2.0
     - 1.2.1
     - 1.2.2
+    - 1.2.3
     compatible:
     - 1.2.2
-    verified: 1.2.2
+    - 1.2.3
+    verified: 1.2.3
   dependencies:
   - name: com.unity.test-framework
     version: 1.0.16
