@@ -1,0 +1,15 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="Change_scene">
+			<method name="loadscene"/>
+			<method name="loadscene"/>
+			<method name="loadscene"/>
+			<method name="loadscene"/>
+			<method name="loadscene"/>
+			<method name="loadscene"/>
+		</type>
+		<type fullname="quit">
+			<method name="CerrarJuegoFuncion"/>
+		</type>
+	</assembly>
+</linker>

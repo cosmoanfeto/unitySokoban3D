@@ -25,12 +25,20 @@ public class Movement_caja : MonoBehaviour
         {
             die();
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Respawn();
+        }
     }
     // Update is called once per frame
-
+    void Respawn()
+    {
+        transform.position = spawn;
+        // También puedes restablecer cualquier otra variable que necesites aquí
+    }
     private void OnCollisionEnter(Collision other)
     {
-        if (other.transform.tag == "Enemy" && velocidad==0)
+        if (other.transform.tag == "Enemy" && velocidad==0 )
         {
             die();
         }
@@ -40,7 +48,7 @@ public class Movement_caja : MonoBehaviour
             //Instantiate(Ganaste);
             velocidad = 0;
         }
-        if (other.transform.tag == "Police" && velocidad == 0)
+        if (other.transform.tag == "police_object" && velocidad == 0)
         {
             die();
         }

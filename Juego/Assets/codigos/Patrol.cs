@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class Patrol : MonoBehaviour
 {
-    public Transform[] patrolPoint;
-    private int currentPoint;
-    public float velocidad;
-    // Start is called before the first frame update
-    void Start()
+    public float velocidad = 4f;
+private float limiteDerecho = 40f;
+private float limiteIzquierdo = -45f;
+
+// Update is called once per frame
+void Update()
+{
+    // Movimiento horizontal
+    transform.Translate(Vector3.right * velocidad * Time.deltaTime);
+
+    // Si el objeto se sale de la cámara por la derecha, lo coloca en la izquierda
+    if (transform.position.x > limiteDerecho)
     {
-        transform.position = patrolPoint[0].position;
-        currentPoint = 0;
+        Vector3 nuevaPosicion = new Vector3(limiteIzquierdo, 1, 7/2);
+        transform.position = nuevaPosicion;
     }
-    // Update is called once per frame
-    void Update()
-    {
-        if (transform.position == patrolPoint[currentPoint].position)
-        {
-            currentPoint++;
-        }
-        if (currentPoint >= patrolPoint.Length)
-        {
-            currentPoint = 0;
-        }
-        transform.position = Vector3.MoveTowards(transform.position, patrolPoint[currentPoint].position, velocidad * Time.deltaTime);
-    }
+
+    //// Si el objeto se sale de la cámara por la izquierda, lo coloca en la derecha
+    //if (transform.position.x < limiteIzquierdo)
+    //{
+    //    Vector3 nuevaPosicion = new Vector3(limiteDerecho, 1, 1);
+    //    transform.position = nuevaPosicion;
+    //}
+}
 }
