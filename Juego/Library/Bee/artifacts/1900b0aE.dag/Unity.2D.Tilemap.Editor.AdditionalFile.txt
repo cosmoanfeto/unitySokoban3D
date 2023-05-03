@@ -1,5 +1,1 @@
-<<<<<<< Updated upstream
-C:\Users\Gisell\Desktop\SOKOBAN\unitySokoban3D\Juego
-=======
-D:\escritorio pchp\RepoUnitySokoban\unitySokoban3D\unitySokoban3D\Juego
->>>>>>> Stashed changes
+E:\UNIVERSIDAD\10 SEMESTRE\Aplicaciones 3D\unitySokoban3D\Juego

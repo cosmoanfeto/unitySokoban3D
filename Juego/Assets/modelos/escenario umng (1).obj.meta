@@ -3,7 +3,327 @@ guid: 1c6fec5eeba50324f9ed8020afba8501
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: edifcio_principal_pCube1Mat
+    second: {fileID: 2100000, guid: aaa1ee60a0ac6cd45a389350b69dc953, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: edifcio_principal_pCube3Mat
+    second: {fileID: 2100000, guid: 2eb8f01410bcc0148994c136a98c07f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: edifcio_principal_pCube4Mat
+    second: {fileID: 2100000, guid: 004ed0f28ac828746b096bba5741c80e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: edifcio_principal_pCube5Mat
+    second: {fileID: 2100000, guid: 85a6c2d4315845a4aa2070de7d9dd5e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder10Mat
+    second: {fileID: 2100000, guid: cf0f0ab3171ba68458d4c3de70bfb871, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder11Mat
+    second: {fileID: 2100000, guid: 08efd024710760a4c98621c172fe7886, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder12Mat
+    second: {fileID: 2100000, guid: 62ef4eb799732aa46984d07478c7dd74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder13Mat
+    second: {fileID: 2100000, guid: 484c9d8fc566c3d4395e426cac10c876, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder14Mat
+    second: {fileID: 2100000, guid: c0338e3dead6c43408be9b42b1b91c6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder2Mat
+    second: {fileID: 2100000, guid: da4488c935dbe7e4d9f8255a4333234e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder3Mat
+    second: {fileID: 2100000, guid: 6949057ca05865a4ba03a48b1ce23035, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder4Mat
+    second: {fileID: 2100000, guid: 46169364670ef5948a748d35876daa1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder5Mat
+    second: {fileID: 2100000, guid: 6cc9da94fd0b02944a7931ebb6bf64d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder6Mat
+    second: {fileID: 2100000, guid: 6722cf08b81d04543a31cc3a69d2a0bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder7Mat
+    second: {fileID: 2100000, guid: 4a3e1391bee96674a84d8c6114afa8bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder8Mat
+    second: {fileID: 2100000, guid: fa6aef28b0133f74c852e63c1b60f754, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_rejas_pCylinder9Mat
+    second: {fileID: 2100000, guid: 7671a51e76c0a0c4da575031f02f5e47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_edifcio_principalMat
+    second: {fileID: 2100000, guid: 9edefe03562a8524c9bd9027486ef849, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube8Mat
+    second: {fileID: 2100000, guid: afc592b9d2d8fdd488f487375f04448d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCylinder1_group1_rejasMat
+    second: {fileID: 2100000, guid: 32a69596a28fcef4fb9e127864dd47ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pPlane1Mat
+    second: {fileID: 2100000, guid: 2a6e4828e6c6d0e46a931abe947f75d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface1Mat
+    second: {fileID: 2100000, guid: 7ecda24eea3f3144ba1b5d916e0a5c49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder10Mat
+    second: {fileID: 2100000, guid: ebcd10c81e867284da0e90ea4c04d259, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder11Mat
+    second: {fileID: 2100000, guid: 5931302c89a53b84ca8266a61f06a43c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder12Mat
+    second: {fileID: 2100000, guid: c0f3966df92823942b1851b215dab93c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder13Mat
+    second: {fileID: 2100000, guid: 717d72abea3f92141b6362c9f71c9ff1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder14Mat
+    second: {fileID: 2100000, guid: 590730ea4f420b1488147b457ee65c3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder2Mat
+    second: {fileID: 2100000, guid: dd0ef52b582e5fa48ae8320cc5d2fd3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder3Mat
+    second: {fileID: 2100000, guid: 468b76ce146d32c43b376afd3578d881, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder4Mat
+    second: {fileID: 2100000, guid: e3a11c04ac409eb4c890353fed5fd7a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder5Mat
+    second: {fileID: 2100000, guid: 3f6b2402758cd8f41a5fb1112262ec0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder6Mat
+    second: {fileID: 2100000, guid: cd739eb0cd2b7fc4fba8c40bcd2e27cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder7Mat
+    second: {fileID: 2100000, guid: 1b22db7080609a34cb0de92f9d6f3714, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder8Mat
+    second: {fileID: 2100000, guid: 5b0701b41a2836e4684a16a4b661be64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group2_pCylinder9Mat
+    second: {fileID: 2100000, guid: 817b6172399b72f4da6b51b6b07a78dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder10Mat
+    second: {fileID: 2100000, guid: 4a7ddb6d6a904ab42b2e4f349d056429, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder11Mat
+    second: {fileID: 2100000, guid: 038eaa60de647c94992a0a134a72afcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder12Mat
+    second: {fileID: 2100000, guid: 6e37ad8b03068a74593266d0fa10ca94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder13Mat
+    second: {fileID: 2100000, guid: a814b99cdfd362d44a7e624e4af64707, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder14Mat
+    second: {fileID: 2100000, guid: 021f57f7c11159048aecc8dfb55ea7e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder2Mat
+    second: {fileID: 2100000, guid: f30079c949d51f34791bc44a201a9344, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder3Mat
+    second: {fileID: 2100000, guid: 33f9b57da51c63444b6e3b8c9cc30780, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder4Mat
+    second: {fileID: 2100000, guid: 4e692ffb2de860640ab2d6a5eb0a7f39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder5Mat
+    second: {fileID: 2100000, guid: 415c2863770d28c4fad88e8efb4e1e53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder6Mat
+    second: {fileID: 2100000, guid: f107d4927747889438854dfaf39f299f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder7Mat
+    second: {fileID: 2100000, guid: 506083b7d494e10468cefceb701834a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder8Mat
+    second: {fileID: 2100000, guid: c9f52a88dec8dcf46ba36cc0816d6461, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group3_pCylinder9Mat
+    second: {fileID: 2100000, guid: e69cb8a6c3425dc40acc31f0c9d1bc4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder10Mat
+    second: {fileID: 2100000, guid: a3141c7baa58ec1439ef5e6dc1779fcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder11Mat
+    second: {fileID: 2100000, guid: 5e15701275570aa4ea3873f19f95f706, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder12Mat
+    second: {fileID: 2100000, guid: 80821a93759e0fc44bbc6e2618e6f1cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder13Mat
+    second: {fileID: 2100000, guid: b7c3fe88e8fa03d4c939ad42e7489808, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder14Mat
+    second: {fileID: 2100000, guid: 50f0896915426b245949ec3f96550051, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder2Mat
+    second: {fileID: 2100000, guid: 51a689371fa28144d97bf9b698403428, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder3Mat
+    second: {fileID: 2100000, guid: 4cc988548a6008f49aa3c479aa4eee45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder4Mat
+    second: {fileID: 2100000, guid: 031accfab0e8c494893b73b30bdade0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder5Mat
+    second: {fileID: 2100000, guid: 30abf5d0acc770c4a83ac1d0c31f8058, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder6Mat
+    second: {fileID: 2100000, guid: 82fd650537b74dd41b8be502dea35b39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder7Mat
+    second: {fileID: 2100000, guid: a6a27bbbc6433814fa5d2f809451f55c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder8Mat
+    second: {fileID: 2100000, guid: 8b936226d5cb00845ac21bf01f15551d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_group4_pCylinder9Mat
+    second: {fileID: 2100000, guid: 0e8f4a45d113145409b04d9fcfc8ab70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_pCylinder1_group2Mat
+    second: {fileID: 2100000, guid: 05cbadcee5cf96c48a434abe146d0a64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_pCylinder1_group3Mat
+    second: {fileID: 2100000, guid: 64cdb878371023c42bbf1d993e5b845b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejas_pCylinder1_group4Mat
+    second: {fileID: 2100000, guid: c7f05a7eaceaebd4cacc752799c95952, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

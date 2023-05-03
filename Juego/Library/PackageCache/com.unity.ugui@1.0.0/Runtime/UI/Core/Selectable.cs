@@ -444,21 +444,9 @@ namespace UnityEngine.UI
                 t.GetComponents(m_CanvasGroupCache);
                 for (var i = 0; i < m_CanvasGroupCache.Count; i++)
                 {
-<<<<<<< Updated upstream
-                    // if the parent group does not allow interaction
-                    // we need to break
-                    if (m_CanvasGroupCache[i].enabled && !m_CanvasGroupCache[i].interactable)
-                    {
-                        groupAllowInteraction = false;
-                        shouldBreak = true;
-                    }
-                    // if this is a 'fresh' group, then break
-                    // as we should not consider parents
-=======
                     if (m_CanvasGroupCache[i].enabled && !m_CanvasGroupCache[i].interactable)
                         return false;
 
->>>>>>> Stashed changes
                     if (m_CanvasGroupCache[i].ignoreParentGroups)
                         return true;
                 }
