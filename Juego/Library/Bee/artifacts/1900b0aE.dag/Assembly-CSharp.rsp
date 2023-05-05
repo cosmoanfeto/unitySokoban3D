@@ -379,6 +379,7 @@
 "Assets/codigos/PlayerMovement.cs"
 "Assets/codigos/police.cs"
 "Assets/codigos/quit.cs"
+"Assets/codigos/reproducir sonido.cs"
 "Assets/codigos/sitpmov.cs"
 "Assets/codigos/time.cs"
 "Assets/mainMenu.cs"
